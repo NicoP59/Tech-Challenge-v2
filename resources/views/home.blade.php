@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/home/home.css') }}">
 
-    <title>Argonaute</title>
+    <title>Les Argonaute</title>
 </head>
 @section('content')
     <main>
 
         <body>
-            <img src="img/argos.jpg" alt="Argo" class="argo" />
+            <img src="img/argos.png" alt="Argo" class="argo" />
             <h1 class="titre-argo">Recruter un(e) Argonaute</h1>
+
             <form method="POST" action="/create-argonaute" class="new-member-form">
                 @csrf
                 <div class="input">
@@ -27,20 +28,28 @@
             </form>
 
             <h2 class="titre-equipages">LISTE DES ARGONAUTES</h2>
-            <section class="member-list">
+            <article class="member-list">
                 @foreach ($argonautes as $argonaute)
-                    <div class="border">
-                        <p class="equipage"><span class="bold">Nom :</span>
+                    <section class="border">
+                        <div class="icone">
+                            <i class="bi bi-person"></i>
+                        </div>
+                        <p class="equipage"><span class="bold"> Nom :</span>
                             {{ $argonaute->nom }}</p>
-
-                        <a class="text-danger" href="/delete-argonaute/{{ $argonaute->id }}"
-                            onclick="return confirm('Cette argonautes va etre supprimer. Êtes vous sûr(e) de vouloir le supprimer ? CONFIRMER ?')"><i
-                                class="bi bi-trash"></i></a>
-
-                        <a class="text-primary" href="/FormUpdate/{{ $argonaute->id }}"><i class="bi bi-pencil"></i></a>
-                    </div>
+                        <div class="actions">
+                            <div>
+                                <a class="text-danger" href="/delete-argonaute/{{ $argonaute->id }}"
+                                    onclick="return confirm('Cette argonautes va etre supprimer. Êtes vous sûr(e) de vouloir le supprimer ? CONFIRMER ?')"><i
+                                        class="bi bi-trash"></i></a>
+                            </div>
+                            <div>
+                                <a class="text-primary" href="/FormUpdate/{{ $argonaute->id }}"><i
+                                        class="bi bi-pencil"></i></a>
+                            </div>
+                        </div>
+                    </section>
                 @endforeach
-            </section>
+            </article>
         </body>
     </main>
 @endsection

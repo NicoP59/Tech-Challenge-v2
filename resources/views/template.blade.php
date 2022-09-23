@@ -18,8 +18,8 @@
 
     <header>
 
-        <img src="img/soleil.png" />
-        <h1>Les argonautes</h1>
+        <img src="/img/soleil.png" />
+        <h1>LES ARGONAUTES</h1>
     </header>
     <div class="custom-shape-divider-top-1663942047">
         <svg data-name="Couche 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120 " preserveAspectRatio="none">
