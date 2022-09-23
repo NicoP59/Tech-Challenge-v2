@@ -1,6 +1,6 @@
-main {
-    padding-top: 80px;
-    padding-bottom: 50px;
+*{
+    margin: 0;
+    
 }
 
 .argo{
@@ -11,18 +11,45 @@ main {
     width: auto;
 }
 
-.new-member-form, .titre-argo{
+.new-member-form{
 
-    margin-top: 100px;
     width: 70%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    padding:50px;
+}
+
+
+
+.titre-equipages, .titre-argo {
+    text-align: center;
+}
+
+.titre-equipages {
+     background-color: #0059A0;
+     color: #fff;
+     letter-spacing: 0.2em;
+     margin-bottom:50px;
+}
+
+.titre-argo {
+    margin-top:150px;
 }
 
 .nom-argo, input{
 font-size: 30px;
+}
+
+#nom {
+    text-align: center;
+    outline:none;
+    border:none;
+    padding:10px;
+    border-top: 1px solid rgb(189, 186, 186);
+    border-bottom: 1px solid rgb(189, 186, 186);
+
 }
 
 .embarquer {
@@ -48,6 +75,8 @@ font-size: 30px;
     display: inline-block;
     cursor: pointer;
     text-align: center;
+    padding: 8px 40px;
+    margin-left: 20px;
  }
  
  .embarquer:hover {
@@ -64,32 +93,41 @@ font-size: 30px;
     text-decoration: none;
  }
 
+
+ .titre-equipages{
+    padding: 30px;
+ }
 .member-list{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
     padding: 10px;
-     border: 2px solid black;
-   
+   align-items: center;
 }
 
 .border{
-    border: 1px solid red;
+padding:50px;
+    border: 1px solid #1E62D0;
     text-align: center;
+    background-image: linear-gradient(to right bottom, #ffffff, #eaecfc, #cfdbf9, #acccf7, #7ebff2);
+}
+
+.equipage{
+
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    color: rgb(110, 109, 109);
+    letter-spacing: 0.2em;
+    padding-bottom:50px;
 }
 
 .text-danger, .text-primary{
     padding: 10px;
 }
 
-.equipage{
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+.bi-trash, .bi-pencil {
+    color:#000
 }
-
-
-
-
 
 
 
@@ -97,7 +135,7 @@ font-size: 30px;
 
 @media screen and (max-width: 850px) {
     .argo{
-        width: 300px;
+        width: 100%;
     }
 
     .titre-argo{
@@ -105,6 +143,21 @@ font-size: 30px;
         margin-left: 30px;
       
     }
+
+    .member-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+
+
+@media screen and (max-width: 550px) {
+    .member-list{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    
+
+}
+
 
 

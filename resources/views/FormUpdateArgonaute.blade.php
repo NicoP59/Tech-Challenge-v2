@@ -8,7 +8,7 @@
     <main>
 
         <body>
-            <p class="retour"><a href="/abris" class="retour-a"><i class="bi bi-arrow-return-left"></i></a></p>
+            <p class="retour"><a href="/" class="retour-a"><i class="bi bi-arrow-return-left"></i></a></p>
 
             @foreach ($argonautes as $argonaute)
                 <h1 class="update-abri">MODIFIER UN Argonaute</h1>

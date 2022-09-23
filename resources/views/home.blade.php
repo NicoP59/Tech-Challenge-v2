@@ -13,15 +13,20 @@
 
         <body>
             <img src="img/argos.jpg" alt="Argo" class="argo" />
-            <h1 class="titre-argo">Ajouter un(e) Argonaute</h1>
+            <h1 class="titre-argo">Recruter un(e) Argonaute</h1>
             <form method="POST" action="/create-argonaute" class="new-member-form">
                 @csrf
-                <label class="nom-argo" for="nom">Nom de l&apos;Argonaute</label>
-                <input id="nom" name="nom" type="text" placeholder="Charalampos" />
-                <button class="embarquer" type="submit">Envoyer</button>
+                <div class="input">
+                    <div>
+                        <input id="nom" name="nom" type="text" placeholder="Charalampos" />
+                    </div>
+                    <div>
+                        <button class="embarquer" type="submit">Ok</button>
+                    </div>
+                </div>
             </form>
 
-            <h2>Membres de l'équipage</h2>
+            <h2 class="titre-equipages">LISTE DES ARGONAUTES</h2>
             <section class="member-list">
                 @foreach ($argonautes as $argonaute)
                     <div class="border">
@@ -29,7 +34,8 @@
                             {{ $argonaute->nom }}</p>
 
                         <a class="text-danger" href="/delete-argonaute/{{ $argonaute->id }}"
-                            onclick="return confirm('Cette argonautes va etre supprimer. Êtes vous sûr(e) de vouloir le supprimer ? CONFIRMER ?')"><i class="bi bi-trash"></i></a>
+                            onclick="return confirm('Cette argonautes va etre supprimer. Êtes vous sûr(e) de vouloir le supprimer ? CONFIRMER ?')"><i
+                                class="bi bi-trash"></i></a>
 
                         <a class="text-primary" href="/FormUpdate/{{ $argonaute->id }}"><i class="bi bi-pencil"></i></a>
                     </div>
