@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'App\Http\Controllers\ArgonauteController@AffichageArgo');
+Route::get('/FormUpdate/{id}', 'App\Http\Controllers\ArgonauteController@AffichageFormUpdate');
+
+
+// CRUD
+
+Route::post('/create-argonaute', 'App\Http\Controllers\ArgonauteController@create');
+Route::post('/FormUpdate/{id}', 'App\Http\Controllers\ArgonauteController@update');
+Route::get('/delete-argonaute/{id}', 'App\Http\Controllers\ArgonauteController@delete');
