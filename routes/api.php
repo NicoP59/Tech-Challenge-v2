@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// C'est ici que vous pouvez enregistrer des routes d'API pour votre application. Ces
+//   routes sont chargées par le RouteServiceProvider au sein d'un groupe qui
+//  se voit attribuer le groupe middleware "api". Amusez-vous à créer votre API !
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });

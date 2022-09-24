@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// C'est ici que vous pouvez enregistrer des routes Web pour votre application. Ces
+//  les routes sont chargées par le RouteServiceProvider au sein d'un groupe qui
+// contient le groupe middleware "web".
+
 Route::get('/', 'App\Http\Controllers\ArgonauteController@AffichageArgo');
 Route::get('/FormUpdate/{id}', 'App\Http\Controllers\ArgonauteController@AffichageFormUpdate');
 

@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 class Argonaute extends Model
 {
 
+    // Fillable signifie quelles colonnes du tableau sont autorisées à être insérées
+    
     protected $fillable = [
         "id",
         "nom,"

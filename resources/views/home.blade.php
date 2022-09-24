@@ -29,6 +29,7 @@
 
             <h2 class="titre-equipages">LISTE DES ARGONAUTES</h2>
             <article class="member-list">
+                {{-- Le foreach va servir a boucler le model pour chaque donnée inséré,recuperer le tableau et il va créer une div --}}
                 @foreach ($argonautes as $argonaute)
                     <section class="border">
                         <div class="icone">

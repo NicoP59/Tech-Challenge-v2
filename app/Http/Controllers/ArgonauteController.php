@@ -11,6 +11,9 @@ class ArgonauteController extends Controller
 
     public function AffichageArgo()
     {
+        // creation de la variable argonautes qui va contenir le Model
+        //  de notre table et va nous retourner la view home
+        // le get permet de retourné un tableau des données
         $argonautes = Argonaute::get(['nom', 'id']);
         return view('home')->with('argonautes', $argonautes);
     }
@@ -36,7 +39,7 @@ class ArgonauteController extends Controller
         ]);
 
         $argonaute = request('nom');
-
+// new argonaute est un equivalent de insert into
         $NewArgonaute = new Argonaute();
         $NewArgonaute->nom = $argonaute;
         $NewArgonaute->save();
